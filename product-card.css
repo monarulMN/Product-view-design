@@ -1,0 +1,126 @@
+.product-card{
+    height: 450px;
+    width: 350px;
+    background-color: #232323;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.product-card::before{
+    content: '';
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: #9bdc28;
+    top: 0;
+    left: 0;
+    clip-path: circle(150px at 80% 20%);
+    transition: .5s;
+}
+
+.product-card:hover::before{
+    clip-path: circle(300px at 80% -10%);
+}
+
+
+.card-image{
+    max-width: 350px;
+    position: absolute;
+    top: 0;
+    left: 5%;
+    transform: translatey(120%);
+    transition: .5s;
+} 
+
+.card-image img{
+    width: 90%;
+    transform: rotate(10deg);
+}
+
+.product-card:hover .card-image{
+    transform: translatey(20%);
+}
+
+.card-body{
+    position: absolute;
+    color: #fff;
+    height: 100px;
+    width: 100%;
+    bottom: 5%;
+    left: 0%;
+    text-align: center;
+    transition: .5s;
+}
+
+.product-card:hover .card-body{
+    height: 200px;
+}
+
+.sizes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sizes span{
+    height: 25px;
+    width: 25px;
+    background-color: #fff;
+    color: black;
+    margin-left: 5px;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.colors{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.colors span{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+
+.colors span:nth-child(2){
+    background-color: #9bdc28;
+}
+
+.colors span:nth-child(3){
+    background-color: #9bdc;
+}
+
+.colors span:nth-child(4){
+    background-color: #fff;
+}
+
+.card-body{
+    margin: 60px 0;
+}
+
+.buy-now-btn{
+    border: 0;
+    outline: 0;
+    background-color: #9db;
+    color: #000;
+    border-radius: 3px;
+    cursor: pointer;
+    padding: 5px 15px;
+    font-size: 18px;
+}
+
+.product-details{
+    opacity: 0;
+    transition: .5s;
+}
+
+.product-card:hover .product-details{
+    opacity: 1;
+}
+
